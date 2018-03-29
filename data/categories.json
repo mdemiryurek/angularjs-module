@@ -1,0 +1,24 @@
+﻿{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bilgisayar",
+      "description": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+    },
+    {
+      "id": 2,
+      "name": "Kitap",
+      "description": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+    },
+    {
+      "id": 3,
+      "name": "TV",
+      "description": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+    },
+    {
+      "id": 4,
+      "name": "Telefon",
+      "description": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization."
+    }
+  ]
+}

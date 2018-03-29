@@ -1,0 +1,53 @@
+﻿{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone S5",
+      "price": 1000.00,
+      "currency": "TL",
+      "categoryId": 4
+    },
+    {
+      "id": 2,
+      "name": "Iphone X",
+      "price": 5000.00,
+      "currency": "TL",
+      "categoryId": 4
+    },
+    {
+      "id": 3,
+      "name": "Color of Paradise",
+      "price": 15.00,
+      "currency": "TL",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "Samsung TV",
+      "price": 4500.00,
+      "currency": "TL",
+      "categoryId": 3
+    },
+    {
+      "id": 5,
+      "name": "Sony TV",
+      "price": 4650.00,
+      "currency": "TL",
+      "categoryId": 3
+    },
+    {
+      "id": 6,
+      "name": "LG TV",
+      "price": 3800.00,
+      "currency": "TL",
+      "categoryId": 3
+    },
+    {
+      "id": 7,
+      "name": "LG New TV",
+      "price": 6300.00,
+      "currency": "TL",
+      "categoryId": 3
+    }
+  ]
+}

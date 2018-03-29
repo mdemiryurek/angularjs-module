@@ -1,0 +1,32 @@
+﻿{
+  "members": [
+    {
+      "id": 1,
+      "firstName": "Mesut",
+      "lastName": "Demiryürek",
+      "email": "mesut.demiryurek@veripark.com",
+      "password": "mesut"
+    },
+    {
+      "id": 2,
+      "firstName": "Ahmet",
+      "lastName": "Yılmaz",
+      "email": "ahmet.yilmaz@gmail.com",
+      "password": "ahmet"
+    },
+    {
+      "id": 3,
+      "firstName": "Gökhan",
+      "lastName": "Atılgan",
+      "email": "gokhan.atilgan@gmail.com",
+      "password": "gokhan"
+    },
+    {
+      "id": 4,
+      "firstName": "Mustafa",
+      "lastName": "Yenilikçi",
+      "email": "mustafa.yenilikci@gmail.com",
+      "password": "mustafa"
+    }
+  ]
+}

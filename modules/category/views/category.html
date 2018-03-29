@@ -1,0 +1,23 @@
+﻿<div class="container">
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">{{categoryInfo.name}}</h1>
+        <p class="lead">{{categoryInfo.description}}</p>
+    </div>
+
+    <div class="card-deck mb-3 text-center">
+
+        <div class="alert alert-dark w-100" ng-show="messageShow">
+            {{message}}
+        </div>
+
+        <div class="card mb-4 box-shadow" ng-repeat="item in products">
+            <div class="card-body">
+                <h1 class="h3 font-weight-light">{{item.name}} {{counter}}</h1>
+                <label class="mt-3 mb-4 font-weight-bold">{{(item.price | number:2) +' '+ item.currency}}</label>
+                <a href="/#order/{{item.id}}" class="btn btn-lg btn-block btn-outline-primary">Satın Al</a>
+            </div>
+        </div>
+
+    </div>
+</div>

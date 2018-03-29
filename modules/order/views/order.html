@@ -1,0 +1,89 @@
+﻿<div class="container">
+
+    <div class="py-5 text-center" ng-show="!isCompleted">
+        <h2>Sipariş formu</h2>
+        <p class="lead">Lütfen bilgilerinizi doğru şekilde giriniz.</p>
+    </div>
+
+    <div class="py-5 text-center" ng-show="isCompleted">
+        <h1 class="font-weight-light">Teşekkürler</h1>
+        <p>Siparişiniz başarılı bir şekilde oluşturulmuştur. Sipariş bilgilerinizi e-posta yoluyla kontrol edebilirsiniz.</p>
+        <a href="/#" class="btn btn-outline-dark">Anasayfaya dön</a>
+    </div>
+
+    <div class="row" ng-show="!isCompleted">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Sipariş ürünü</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">Ürün adı</h6>
+                        <small class="text-muted">{{productInfo.name}}</small>
+                    </div>
+                    <span class="text-muted">{{(productInfo.price | number:2) +' '+ productInfo.currency}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Toplam</span>
+                    <strong>{{(productInfo.price | number:2) +' '+ productInfo.currency}}</strong>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Sipariş bilgileri</h4>
+            <form class="needs-validation" ng-submit="orderFormSend()">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name">İsim</label>
+                        <input type="text" class="form-control" id="name" ng-model="name" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="surname">Soyisim</label>
+                        <input type="text" class="form-control" id="surname" ng-model="surname" placeholder="" value="" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">E-mail adresi</label>
+                    <input type="email" class="form-control" id="email" ng-model="email" placeholder="ismin@ornek.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Adres</label>
+                    <input type="text" class="form-control" id="address" ng-model="address" placeholder="Bulgurlu mahallesi Bülbül sokak" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address2">Adres 2 <span class="text-muted">(Opsiyonel)</span></label>
+                    <input type="text" class="form-control" id="address2" ng-model="address2" placeholder="No:19 D:2">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="cityName">Şehir</label>
+                        <select class="custom-select d-block w-100" id="cityName" ng-model="cityName" ng-change="onChangeDistrict()" required>
+                            <option value="">Seçiniz...</option>
+                            <option ng-repeat="city in citiesAndDistricts | unique:'plaka'" value="{{city.il}}">{{city.il}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="districtName">İlçe</label>
+                        <select class="custom-select d-block w-100" id="districtName" ng-model="districtName" required>
+                            <option value="">Seçiniz...</option>
+                            <option ng-repeat="district in districts" value="{{district.ilce}}">{{district.ilce}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Posta Kodu</label>
+                        <input type="text" class="form-control" id="zip" ng-model="zip" placeholder="" required>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" ng-hide="isFormSubmiting">Siparişi Tamamla</button>
+                <div class="loader" ng-show="isFormSubmiting"></div>
+            </form>
+        </div>
+    </div>
+
+</div>
